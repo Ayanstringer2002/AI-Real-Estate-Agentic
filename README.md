@@ -75,6 +75,12 @@ Explainable Recommendations
 - **Explainable Recommendations**
   - Clearly explains *why* a property matches the user’s requirements
 
+ ## Set Environment Variable
+```bash
+GROQ_API_KEY="your_access_key_here"
+```
+
+
 
 
 
