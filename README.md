@@ -28,8 +28,6 @@ The system combines **multi-agent planning**, **Retrieval-Augmented Generation (
 
 ## 🏗️ System Architecture
 
-The AI Real Estate Assistant is built using an agentic, retrieval-augmented architecture designed for intelligent, explainable, and conversational property discovery.
-
 User Query
 ↓
 Streamlit UI (Filters + Chat)
@@ -48,6 +46,9 @@ Groq LLM (Reasoning & Response Generation)
 Conversational Memory
 ↓
 Explainable Property Recommendations
+
+Copy code
+
 
 
 ### 🔍 Architecture Breakdown
