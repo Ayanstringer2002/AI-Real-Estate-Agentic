@@ -41,7 +41,7 @@ RAG Pipeline
 ├── FastEmbed (Embeddings)
 ├── ChromaDB (Vector Store)
 ↓
-Google Gemini (LLM Reasoning)
+Groq API(LLM Reasoning)
 ↓
 Conversational Memory
 ↓
