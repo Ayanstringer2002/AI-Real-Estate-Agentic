@@ -15,7 +15,7 @@ The system combines **multi-agent planning**, **Retrieval-Augmented Generation (
   High-quality vector search powered by **FastEmbed** and **ChromaDB** for context-aware property retrieval.
 
 - 🤖 **LLM-Based Reasoning**  
-  Uses **Google Gemini LLM** to generate accurate, human-like, and reasoned property recommendations.
+  Uses **Groq LLM** to generate accurate, human-like, and reasoned property recommendations.
 
 - 🧾 **Explainable AI Outputs**  
   Clear explanations on *why* a property matches the user’s preferences and constraints.
