@@ -75,10 +75,17 @@ Explainable Recommendations
 - **Explainable Recommendations**
   - Clearly explains *why* a property matches the user’s requirements
 
- ## Set Environment Variable
+ ### Set Environment Variable
 ```bash
-GROQ_API_KEY="your_access_key_here"
+GROQ_API_KEY="your_api_key_here"
 ```
+### Run The App
+```bash
+streamlit run app.py
+```
+
+
+
 
 
 
