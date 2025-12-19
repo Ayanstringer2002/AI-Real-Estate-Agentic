@@ -1,10 +1,14 @@
-from llm.llm_client import llm
+from llm.llm_client import generate_llm_response
 from utils.prompt import RAG_PROMPT
+from memory.chat_memory import memory
 
-
-def generate_answer(query, context):
+def generate_answer(query, context, plan):
     prompt = RAG_PROMPT.format(
         query=query,
-        context="\n".join(context)
+        context="\n".join(context),
+        plan=plan
     )
-    return llm.predict(prompt)
+
+    response = generate_llm_response(prompt)
+    memory.save_context({"input": query}, {"output": response})
+    return response
