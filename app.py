@@ -1,8 +1,12 @@
+# ✅ MUST be first
+from dotenv import load_dotenv
+load_dotenv()
+
 import streamlit as st
 from rag.retriever import retrieve_context
 from rag.generator import generate_answer
 from agents.planner import plan
-from memory.chat_memory import memory
+from memory import chat_memory
 
 st.set_page_config(page_title="Agentic AI Real Estate Assistant")
 st.title("🏠 Agentic AI Real Estate Assistant")
@@ -18,7 +22,7 @@ min_budget, max_budget = st.sidebar.slider(
 
 location = st.sidebar.selectbox(
     "Preferred Location",
-    ["Any", "Bangalore", "Pune", "Hyderabad", "Mumbai", "Chennai"]
+    ["Any", "Bangalore", "Pune", "Hyderabad", "Mumbai", "Chennai", "Delhi", "Patna"]
 )
 
 query = st.chat_input("Describe your property needs")
@@ -29,8 +33,8 @@ if query:
     user_plan["location_filter"] = location
 
     context = retrieve_context(query)
-    response = generate_answer(query, context, user_plan)
+    generate_answer(query, context, user_plan)
 
-for msg in memory.chat_memory.messages:
-    role = "User" if msg.type == "human" else "Assistant"
-    st.chat_message(role).write(msg.content)
+# Render chat history
+for msg in chat_memory.get():
+    st.chat_message(msg["role"]).write(msg["content"])
