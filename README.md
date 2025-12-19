@@ -26,8 +26,8 @@ The system combines **multi-agent planning**, **Retrieval-Augmented Generation (
 - 🎛️ **Interactive UI Filters**  
   User-friendly controls for budget, location, and preference-based filtering.
 
-## 🏗️ System Architecture
-
+###  System Architecture
+```bash
 User Query
 ↓
 Streamlit UI (Filters + Chat)
@@ -35,20 +35,18 @@ Streamlit UI (Filters + Chat)
 Planner Agent
 ├── Budget Agent
 ├── Location Agent
-└── Lifestyle Agent
+├── Lifestyle Agent
 ↓
 RAG Pipeline
 ├── FastEmbed (Embeddings)
-└── ChromaDB (Vector Store)
+├── ChromaDB (Vector Store)
 ↓
-Groq LLM (Reasoning & Response Generation)
+Google Gemini (LLM Reasoning)
 ↓
 Conversational Memory
 ↓
-Explainable Property Recommendations
-
-Copy code
-
+Explainable Recommendations
+```
 
 
 ### 🔍 Architecture Breakdown
