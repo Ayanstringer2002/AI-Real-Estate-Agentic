@@ -75,6 +75,13 @@ Explainable Recommendations
 - **Explainable Recommendations**
   - Clearly explains *why* a property matches the user’s requirements
 
+### Clone Repository
+```bash
+git clone https://github.com/Ayanstringer2002/AI-Real-Estate-Agentic.git
+cd AI-REAL-ASSISTANT
+```
+
+
  ### Set Environment Variable
 ```bash
 GROQ_API_KEY="your_api_key_here"
